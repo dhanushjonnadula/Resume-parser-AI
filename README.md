@@ -18,13 +18,6 @@ AI Resume Job Role Matcher is a **Flask web application** that analyzes uploaded
 - ✅ **No ML training needed** - zero-shot matching on pre-built dataset
 - ✅ Easy deployment (Flask app)
 
-## 🎨 Screenshots
-### Home Page
-![Home](screenshots/home.png) *(Add your screenshot here)*
-
-### Results Page
-![Results](screenshots/results.png) *(Add your screenshot here)*
-
 ## 🚀 Quick Start
 ```bash
 # Clone the repo
