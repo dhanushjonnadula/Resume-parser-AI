@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results - Resume Role Predictor</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="logo-container">
+  <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="5" width="60" height="80" rx="6" fill="#ffffff" stroke="#3498db" stroke-width="4"/>
+    <line x1="28" y1="28" x2="62" y2="28" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
+    <line x1="28" y1="42" x2="62" y2="42" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
+    <line x1="28" y1="56" x2="50" y2="56" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="75" cy="75" r="18" fill="#2ecc71"/>
+    <path d="M68 75 L72 79 L82 69" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<h1>Top Matching Job Roles</h1>
+<p class="tagline">Here are the best career matches based on your resume</p>
+
+<div class="table-container">
+  {{ table|safe }}
+</div>
+
+<a href="/" class="btn btn-secondary">Analyze Another Resume</a>
+
+
+
+</div>
+
+</body>
+</html>
+

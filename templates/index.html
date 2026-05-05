@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Role Predictor</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="logo-container">
+  <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="5" width="60" height="80" rx="6" fill="#ffffff" stroke="#3498db" stroke-width="4"/>
+    <line x1="28" y1="28" x2="62" y2="28" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
+    <line x1="28" y1="42" x2="62" y2="42" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
+    <line x1="28" y1="56" x2="50" y2="56" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="75" cy="75" r="18" fill="#2ecc71"/>
+    <path d="M68 75 L72 79 L82 69" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<h1>AI Resume Job Role Matcher</h1>
+<p class="tagline">Upload your resume and let AI find your perfect career match</p>
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+
+<div class="upload-area" id="upload-area">
+  <input type="file" name="resume" id="resume" required onchange="document.getElementById('file-name-display').textContent = this.files[0] ? this.files[0].name : ''">
+  <label for="resume">
+    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+      <polyline points="17 8 12 3 7 8"></polyline>
+      <line x1="12" y1="3" x2="12" y2="15"></line>
+    </svg>
+    <span class="upload-text">Click to upload resume</span>
+    <span class="file-types">Supports PDF, DOCX, TXT</span>
+  </label>
+</div>
+
+<div id="file-name-display" class="file-name-display"></div>
+
+<button type="submit">Analyze Resume</button>
+
+</form>
+
+
+
+</div>
+
+</body>
+</html>
+
